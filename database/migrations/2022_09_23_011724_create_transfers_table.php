@@ -15,6 +15,9 @@ return new class extends Migration
     {
         Schema::create('transfers', function (Blueprint $table) {
             $table->id();
+            $table->integer('no_rek_pengirim');
+            $table->integer('no_rek_penerima');
+            $table->integer('nominal');
             $table->timestamps();
         });
     }

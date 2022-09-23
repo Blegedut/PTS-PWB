@@ -15,6 +15,8 @@ return new class extends Migration
     {
         Schema::create('banks', function (Blueprint $table) {
             $table->id();
+            $table->integer('no_rek')->constrained();
+            $table->integer('saldo');
             $table->timestamps();
         });
     }

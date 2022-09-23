@@ -15,6 +15,10 @@ return new class extends Migration
     {
         Schema::create('pembayarans', function (Blueprint $table) {
             $table->id();
+            $table->integer('no_rek');
+            $table->enum('keterangan', ['pulsa', 'listrik']);
+            $table->integer('nominal');
+            $table->string('no_pembayaran');
             $table->timestamps();
         });
     }
